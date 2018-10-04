@@ -1,0 +1,2 @@
+# Minesweeper
+Angular based Minesweeper
