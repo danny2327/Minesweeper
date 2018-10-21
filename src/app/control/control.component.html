@@ -1,0 +1,42 @@
+<div class="row menuItems">
+  <a class="menuItem" (click)="showGameMenu = !showGameMenu">Game</a>
+  </div>
+
+<div class="gameMenu" *ngIf="showGameMenu">
+  <div class='center'><strong>Rules/Gameplay</strong></div> <p>
+  <div>Click on a square to remove it</div> <p>
+  <div>Right click on a square to mark it as a mine. Again to undo.</div><p>
+  <div>Click on a number, and if that number of mines are marked around it, it will clear the rest.</div>
+  <div>To win, clear all empty spaces or mark all mines.</div>
+  v 0.7
+</div>
+  <!-- <div class="row gameMenu" *ngIf="showGameMenu">
+  <div class="input">
+    <label for="size">Size</label>
+    <input id='size' type="number" [(ngModel)]="size">
+  </div>
+  <div class="input">
+    <label for="mines">Mines</label>
+    <input id='mines' type="number" [(ngModel)]="mines" >
+  </div>
+  <div class="input">
+    <button type="button" (click)="onClickNew()">New Game</button>
+  </div>
+</div> -->
+<div class="row">
+  <span class="col-2 numbers minesLeft">
+    <span *ngIf="minesLeft < 100" class="minesHundreds">0</span>
+    <span *ngIf="minesLeft < 10"  class="minesTens">0</span>
+    {{ minesLeft }}
+  </span>
+  <span class="col-2 col-offset-6">
+    <button (click)="clickOnFace()">
+        <img [src]="getFace()" class="img-relative">
+      </button>
+  </span>
+  <span class="col-2 numbers time">
+    <span *ngIf="gameTime < 100" class="timeHundreds">0</span>
+    <span *ngIf="gameTime < 10" class="timeTens">0</span>
+    {{ gameTime }}
+  </span>
+</div>

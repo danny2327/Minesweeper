@@ -1,0 +1,24 @@
+
+<div class="container" [ngStyle]="{'width.px': getWidth()}"
+(contextmenu)="onRightClick($event)">
+  <div class="row control">
+    <h1>Minesweeper</h1>
+    <div class="col-lg-12">
+      <app-control></app-control>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-12  game">
+        <div *ngFor="let r of rows; let iR = index">
+            <app-square
+              [id]="'appSquare' + squares[(iR*(rows.length))+(iC+1)].index"
+              *ngFor="let c of rows; let iC = index"
+              [square]="squares[(iR*(rows.length))+(iC+1)]"
+              (mousedown)="onClick($event)">
+            </app-square>
+        </div>
+      </div>
+    </div>
+  <!-- <app-game></app-game> -->
+</div>
+

@@ -1,0 +1,19 @@
+<span class="app-square" [id]="'square' + square.index">
+  <img style="height:15px; width:15px;" *ngIf="square.hasMine else mines " src="../../assets/images/bomb.png">
+  <ng-template #mines>
+    <span
+    (click)="onClickMinesNear(square.index)"
+      class="minesNear"
+      *ngIf="square.minesNear > 0"
+      [style.color]="getTextColour(square.minesNear)">
+        {{ square.minesNear }}
+      </span>
+    </ng-template>
+</span>
+<button class=""
+(mousedown)="onClick($event)"
+(contextmenu)="onRightClick($event)"
+ [id]="'button' + square.index"
+ *ngIf="!square.isExposed">
+  <img src="../../assets/images/flag.png" class="flag" *ngIf="marked">
+</button>

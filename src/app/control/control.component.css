@@ -1,0 +1,40 @@
+.row {
+  font-family: 'Orbitron';
+  color: red;
+  font-weight: 900;
+  height: 50px;
+  background-color: #bbb;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.numbers {
+  /* background-image: '../../assets/images/numberbg.PNG'; */
+  background-color: black;
+  width: 55px;
+}
+
+.minesLeft {
+  float:left;
+}
+
+.time {
+  float:right;
+}
+
+a {
+  cursor: pointer;
+  float:left;
+}
+
+input {
+  width: 3em;
+  color:black;
+}
+
+.input {
+  float:left;
+}
