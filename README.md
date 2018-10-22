@@ -1,6 +1,9 @@
 # Minesweeper
 
 Project created as a lark. As of V0.7, you cannot change the size of the game, only play it as 10x10. That will be coming in a future update.
+Download and run 
+    npm install
+To install deps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
